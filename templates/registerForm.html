@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2 align="center">REGISTER</h2>
+<form action="registercomplete" method="post">
+    {% csrf_token %}
+    <div class="field">
+        <label class="label">Username</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Username" name="username">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Firstname</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Firstname" name="firstname">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Lastname</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Lastname" name="lastname">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input class="input" type="email" placeholder="Email" name="email">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input class="input" type="password" placeholder="Password" name="password">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Re-Password</label>
+        <div class="control">
+          <input class="input" type="password" placeholder="Password" name="repassword">
+        </div>
+      </div>
+
+      <div class="control">
+        <button class="button is-link" value="submit">Submit</button>
+      </div>
+</form>
+
+
+{% endblock %}

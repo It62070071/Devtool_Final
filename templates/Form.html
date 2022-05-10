@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2 align="center">ค้นหาหลักสูตรที่เปิด</h2>
+<form action="addForm" method="post">
+    {% csrf_token %}
+    
+    <div class="field">
+        <label class="label">ค้นหา 'คณะ'</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option></option>
+              <option>วิศวะกรรมศาสตร์</option>
+              <option>บริหารธุรกิจ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">ค้นหา 'รอบรับสมัคร'</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option></option>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">ค้นหา 'โครงการ'</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option></option>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">ค้นหาหลักสูตร ไทย / นานาชาติ</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option></option>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">คำค้นหาเพิ่มเติม (Enter เพื่อแยกคำ) [ระบบจะค้นจากชื่อคณะ,หลักสูตร]</label>
+        <div class="control">
+          <input class="input" type="text">
+        </div>
+      </div>
+
+      <!-- <div class="control">
+        <button class="button is-link" value="submit">Submit</button>
+      </div> -->
+</form>
+
+
+{% endblock %}
